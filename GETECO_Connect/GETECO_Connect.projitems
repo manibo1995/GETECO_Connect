@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{E42FD981-CA0F-47EA-AC81-07F5FF1833D5}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GETECO_Connect</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Feed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FeedTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FeedDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Feed.xaml.cs">
+      <DependentUpon>Feed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Viewmodels\FeedViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Globals\Commands.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Globals\Methods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Globals\Standards.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Globals\UserData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ConnPers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DataItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DisplayRating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MasterPageCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NewProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Persons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Profiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProfiltextClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\GETECOCONNECTDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\IFileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\localUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\Owner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\Profile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\ProfileChartData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Models\Rating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Viewmodels\RegisterViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Feeds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Viewmodels\LoginViewmodel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SingleFeed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FeedTest.xaml.cs">
+      <DependentUpon>FeedTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FeedDetail.xaml.cs">
+      <DependentUpon>FeedDetail.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Viewmodels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Globals\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Database\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Database\Models\" />
+  </ItemGroup>
+</Project>

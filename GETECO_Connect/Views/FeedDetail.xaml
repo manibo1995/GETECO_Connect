@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:webview="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GETECO_Connect.Views.FeedDetail">
+    <ContentPage.Content>
+        
+            
+        <webview:FormsWebView Source="{Binding Text}" ContentType="StringData">
+            
+        </webview:FormsWebView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:webview="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions" 
+             x:Class="GETECO_Connect.Views.Feed" 
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView" >
+   <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+        <cv:CarouselView ItemsSource="{Binding Feed}" ItemSelected="Handle_ItemSelected">
+            
+            <cv:CarouselView.ItemTemplate>
+                <DataTemplate>
+                        <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Handle_Tapped"/>
+                        </Grid.GestureRecognizers>
+                            <Grid.Resources>
+                                <xamanimation:TranslateToAnimation x:Key="trans" Target="{x:Reference Bild}" Duration="10000" TranslateX="10" />
+                                <xamanimation:ShakeAnimation Duration="10000" x:Key="shake" Target="{x:Reference Bild}" />
+                                <xamanimation:TurnstileInAnimation Duration="5000" x:Key="Turn" Target="{x:Reference Bild}" />
+                                <xamanimation:ScaleToAnimation Duration="10000" Scale="1" Target="{x:Reference Bild}" x:Key="scale" />
+                                <xamanimation:HeartAnimation Duration="30000" x:Key="heart" Target="{x:Reference Bild}" />
+                            </Grid.Resources>
+                            <Grid x:Name="grid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Image x:Name="Bild" Source="{Binding picture1}"  Scale="1.1" Aspect="AspectFill" Grid.Row="0" Grid.RowSpan="3">
+
+                                <!--   <Image.Behaviors>
+                                        <xamanimation:BeginAnimationBehavior Animation="{StaticResource heart}" />
+                                    </Image.Behaviors>-->
+                                </Image>
+                              
+                                <StackLayout BackgroundColor="#C3c3c3" Grid.Row="1">
+                                    <Label Text="{Binding headline1}" HorizontalTextAlignment="Center" Margin="30" />
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+        </cv:CarouselView>
+    </StackLayout>
+  
+</ContentPage>

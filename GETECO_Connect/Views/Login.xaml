@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GETECO_Connect.Views.Login">
+    <ContentPage.Content>
+
+
+       
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="0,100,0,0" x:Name="stack" >
+                <!--<Image Source="TOPOINEX_Logo_02.png" HorizontalOptions="Center" Margin="40,0,40,20"/>-->
+                <Entry Placeholder="E-Mail" x:Name="EnUsername" Text="{Binding Username}" HorizontalOptions="Center" WidthRequest="300"/>
+                <Entry Placeholder="Passwort" x:Name="EnPassword" Text="{Binding Password}" IsPassword="True" HorizontalOptions="Center" WidthRequest="300" Margin="0,0,0,10"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="button_blau.png" Grid.Column="0" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterButton_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Register" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,50,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterButton_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Image Source="button_rot.png" Grid.Column="1" Rotation="180" Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LoginButton_Clicked"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Login" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="50,0,0,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LoginButton_Clicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+            </StackLayout>
+            <!--<StackLayout>
+                <Label Text="E-Mail"/>
+                <Entry x:Name="EnUsername" Text="{Binding Username}"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Password"/>
+                <Entry x:Name="EnPassword" Text="{Binding Password}" IsPassword="True"/>
+            </StackLayout>
+            <Button Text="Login" Clicked="Button_Clicked"/>
+            <Label Text="Facebook"/>
+            <Label Text="Twitter"/>
+            <Label Text="LinkedIn"/>
+            <Label Text="Email"/>-->
+
+       
+        
+    </ContentPage.Content>
+</ContentPage>

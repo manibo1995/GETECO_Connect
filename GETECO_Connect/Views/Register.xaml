@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GETECO_Connect.Views.Register">
+    <ContentPage.Content>
+         <StackLayout Padding="0,20,0,0" VerticalOptions="Center" >
+            <Entry x:Name="vorname" Placeholder="Vorname" />
+            <Entry x:Name="nachname" Placeholder="Nachname" />
+            <Picker x:Name="gender" Title="Geschlecht" ItemsSource="{Binding Geschlechter}">
+            </Picker> 
+            <Entry  x:Name="usname" Text="" Placeholder="Username"/>
+            <Entry  x:Name="pw" Text="" Placeholder="Passwort" IsPassword="True"/>
+                      
+                      
+            <Entry  x:Name="mail" Text="" Placeholder="E-Mail"/>
+            <Entry  x:Name="mailagain" Text="" Placeholder="E-Mail wiederholen"/>
+            <Entry  x:Name="tel" Text="" Placeholder="Telefonnummer"/>
+            <Button  Text="Registrieren" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
